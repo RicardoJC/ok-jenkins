@@ -25,7 +25,7 @@ pipeline {
 
     stage('Final') {
       steps{
-        echo 'Version final: '$(node --version)
+        sh 'echo "Termina el pipeline y la version de node es: "$(node --version)'
       }
 
     }
