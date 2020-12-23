@@ -2,7 +2,7 @@ pipeline {
 
    agent any
    tools {
-    nodejs '15.2.0'
+    nodejs 'node-15.2.0'
    }
 
    options {
@@ -11,15 +11,23 @@ pipeline {
 
    stages {
     stage('Instalando dependencias') {
-      sh 'npm install'
+      steps {
+        sh 'npm install'
+      }
     }
 
     stage('Corriendo test') {
-      sh 'npm test'
+      steps{
+        sh 'npm test'
+      }
+
     }
 
     stage('Final') {
-      echo 'Fin del pipeline'
+      steps{
+        echo 'Fin del pipeline'
+      }
+
     }
 
    }
