@@ -2,7 +2,7 @@ pipeline {
 
    agent any
    tools {
-    nodejs 'node-15.2.0'
+    nodejs 'Node 15.2.0'
    }
 
    options {
@@ -25,7 +25,7 @@ pipeline {
 
     stage('Final') {
       steps{
-        echo 'Fin del pipeline'
+        echo 'Version final: '$(node --version)
       }
 
     }
